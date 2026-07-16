@@ -131,100 +131,100 @@ const tabsData = [
   }
 ];
 
-export default function Section5() {
+export default function Services() {
   const [activeTab, setActiveTab] = useState(tabsData[0].id);
   const activeTabData = tabsData.find(t => t.id === activeTab) || tabsData[0];
 
   return (
-    <section id="services" className="w-full bg-[#181124] py-24 text-white overflow-hidden border-t border-white/10">
-      <div className="max-w-container mx-auto px-6">
+    <section id="services" className="w-full bg-white py-20 md:py-32 overflow-hidden font-sans">
+      <div className="max-w-[1000px] mx-auto px-4 md:px-6">
         
         {/* Header */}
-        <div className="flex flex-col items-center text-center mb-16">
-          <div className="flex items-center space-x-2 text-majorelle font-semibold uppercase tracking-widest text-xs mb-6">
+        <div className="flex flex-col items-center text-center mb-12">
+          <div className="flex items-center space-x-2 text-[#9D71FD] font-bold uppercase tracking-wider text-[11px] md:text-xs mb-6">
             <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="4" cy="4" r="4" fill="currentColor" />
             </svg>
             <h2>Services</h2>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-[36px] md:text-5xl lg:text-[56px] leading-[1.1] font-bold text-[#2B2733] mb-5 tracking-tight max-w-[650px]">
             Everything your team needs to market better
           </h2>
-          <p className="text-lg text-gray-300 max-w-2xl">
+          <p className="text-[#645E76] text-[16px] md:text-lg leading-relaxed max-w-[620px]">
             From pitch decks to specification sheets, campaign landing pages
             to full brand refreshes: we're your in-house creative team,
             without the overheads.
           </p>
         </div>
 
-        {/* Custom Tabs */}
-        <div className="w-full max-w-5xl mx-auto flex flex-col items-center">
-          
-          {/* Tab Menu - horizontally scrollable */}
-          <div className="w-full overflow-x-auto no-scrollbar mb-10 pb-4">
-            <div className="flex space-x-2 md:justify-center w-max md:w-auto px-4 md:px-0">
-              {tabsData.map((tab) => (
-                <button
-                  key={tab.id}
-                  onClick={() => setActiveTab(tab.id)}
-                  className={`px-5 py-2.5 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-300 ${
-                    activeTab === tab.id
-                      ? "bg-majorelle text-white shadow-lg shadow-majorelle/30"
-                      : "bg-[#280F62] text-gray-300 hover:bg-[#3d1985] hover:text-white"
-                  }`}
-                >
-                  {tab.label}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          {/* Tab Content Display */}
-          <div className="w-full flex flex-col items-center relative animate-fade-in">
-            {/* Image Wrapper */}
-            <div className="relative w-full aspect-video md:aspect-[21/9] rounded-[32px] overflow-hidden shadow-2xl mb-8 group">
-              <img 
-                src={activeTabData.imgSrc} 
-                alt={activeTabData.label} 
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              
-              {/* Overlay Logo/Industry */}
-              <div className="absolute bottom-6 left-6 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 flex items-center space-x-4">
-                <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center p-2 shadow-lg">
-                   <img src={activeTabData.logoSrc} alt="logo" className="w-full h-full object-contain" />
-                </div>
-                <div className="text-white text-sm font-medium pr-4">
-                  {activeTabData.industry}
-                </div>
-              </div>
-            </div>
-
-            {/* CTA Button */}
-            <Link 
-              href={activeTabData.btnLink}
-              className="inline-flex items-center space-x-2 px-8 py-4 rounded-full bg-white text-ink font-semibold hover:bg-lavender transition-all"
+        {/* Tab Menu - Slider on Mobile, Wrapping on Desktop */}
+        <div className="w-full flex overflow-x-auto md:flex-wrap md:justify-center gap-2.5 md:gap-3 mb-12 max-w-[850px] mx-auto no-scrollbar snap-x pb-2 md:pb-0 px-2 md:px-0">
+          {tabsData.map((tab) => (
+            <button
+              key={tab.id}
+              onClick={() => setActiveTab(tab.id)}
+              className={`shrink-0 snap-center px-5 py-[10px] rounded-full text-[13px] md:text-[14px] font-medium transition-all duration-300 border ${
+                activeTab === tab.id
+                  ? "bg-[#874FD4] text-white border-[#874FD4] shadow-sm"
+                  : "bg-white text-[#645E76] border-gray-100 hover:border-gray-300 shadow-[0_2px_8px_rgba(0,0,0,0.02)]"
+              }`}
             >
-              <span>{activeTabData.btnText}</span>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M5 12h14M12 5l7 7-7 7"/>
+              {tab.label}
+            </button>
+          ))}
+        </div>
+
+        {/* Tab Content Display */}
+        <div className="w-full flex flex-col relative animate-fade-in">
+          {/* Image */}
+          <div className="w-full aspect-[4/3] sm:aspect-video md:aspect-[21/10] rounded-[24px] md:rounded-[32px] overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.06)] border border-gray-100 mb-6 bg-[#2B2733]">
+            <img 
+              src={activeTabData.imgSrc} 
+              alt={activeTabData.label} 
+              className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+            />
+          </div>
+          
+          {/* Logo and Industry Row */}
+          <div className="flex justify-between items-center w-full px-2 mb-10">
+            <Link href={activeTabData.btnLink} className="flex items-center group">
+              <img 
+                src={activeTabData.logoSrc} 
+                alt="client logo" 
+                className="h-5 md:h-7 w-auto object-contain mr-1 filter brightness-0" 
+              />
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="text-[#2B2733] group-hover:translate-x-1 transition-transform">
+                <polyline points="9 18 15 12 9 6"></polyline>
               </svg>
             </Link>
+            
+            <div className="px-4 py-1.5 rounded-full border border-[#BBA4FF] text-[#874FD4] text-[11px] md:text-xs font-medium tracking-wide bg-[#FDFBFF]">
+              {activeTabData.industry}
+            </div>
           </div>
 
+          {/* CTA Button */}
+          <div className="flex justify-center w-full mt-2 md:mt-4">
+            <Link 
+              href={activeTabData.btnLink}
+              className="inline-flex items-center justify-center px-8 md:px-10 py-3.5 md:py-4 rounded-full bg-[#874FD4] text-white text-[14px] md:text-[15px] font-semibold hover:bg-purple-700 transition-all shadow-lg hover:scale-105"
+            >
+              {activeTabData.btnText}
+            </Link>
+          </div>
         </div>
       </div>
       
-      {/* Hide Scrollbar Style */}
+      {/* Hide Scrollbar Style & Animation */}
       <style dangerouslySetInnerHTML={{
         __html: `
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
         @keyframes fadeIn {
-          from { opacity: 0; transform: translateY(10px); }
+          from { opacity: 0; transform: translateY(8px); }
           to { opacity: 1; transform: translateY(0); }
         }
-        .animate-fade-in { animation: fadeIn 0.4s ease-out forwards; }
+        .animate-fade-in { animation: fadeIn 0.3s ease-out forwards; }
         `
       }} />
     </section>

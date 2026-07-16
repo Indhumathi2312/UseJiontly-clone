@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import WhyJointly from "@/components/WhyJointly";
 import HowWeWork from "@/components/HowWeWork";
-import Section5 from "@/components/Section5";
+import Services from "@/components/Services";
 import CaseStudies from "@/components/CaseStudies";
 import Benefits from "@/components/Benefits";
 import Section8 from "@/components/Section8";
@@ -22,7 +22,7 @@ export default function Page() {
 
       <HowWeWork />
 
-      <Section5 />
+      <Services />
 
       <CaseStudies />
 
@@ -39,8 +39,6 @@ export default function Page() {
       {/*  LINKEDIN TRACKING PIXEL  */}
 
       <Section12 />
-
-      {/* --- */}
     </div>
   );
 }
