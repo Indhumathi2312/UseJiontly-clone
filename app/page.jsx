@@ -7,9 +7,8 @@ import CaseStudies from "@/components/CaseStudies";
 import Benefits from "@/components/Benefits";
 import Section8 from "@/components/Section8";
 import Blog from "@/components/Blog";
-import Section10 from "@/components/Section10";
-import Section11 from "@/components/Section11";
-import Section12 from "@/components/Section12";
+import CallToAction from "@/components/CallToAction";
+import Footer from "@/components/Footer";
 import React from "react";
 export default function Page() {
   return (
@@ -32,13 +31,9 @@ export default function Page() {
 
       <Blog />
 
-      <Section10 />
+      <CallToAction />
 
-      <Section11 />
-
-      {/*  LINKEDIN TRACKING PIXEL  */}
-
-      <Section12 />
+      <Footer />
     </div>
   );
 }

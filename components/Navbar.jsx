@@ -53,16 +53,16 @@ export default function Navbar() {
       </AnimatePresence>
 
       <header 
-        className={`fixed top-4 left-0 right-0 z-50 transition-transform duration-300 ${isScrolled ? '-translate-y-[150%]' : 'translate-y-0'} px-4 sm:px-6`}
+        className={`fixed top-4 md:top-6 left-0 right-0 z-50 transition-transform duration-300 ${isScrolled ? '-translate-y-[150%]' : 'translate-y-0'} px-4 md:px-6`}
       >
-        <div className="max-w-[1240px] mx-auto bg-white rounded-[100px] px-3 sm:px-5 h-[70px] flex items-center justify-between shadow-xl">
+        <div className="max-w-[1200px] mx-auto bg-white rounded-full p-2 sm:p-2.5 flex items-center justify-between shadow-xl">
           
           {/* nav-left */}
-          <div className="flex items-center shrink-0">
+          <div className="flex items-center shrink-0 pl-3 sm:pl-5">
             <Link href="/" className="flex items-center">
               {/* Purple Mask for Logo */}
               <div 
-                className="w-[110px] h-[30px] sm:w-[130px] sm:h-[33px] bg-[#874FD4]" 
+                className="w-[110px] h-[30px] sm:w-[125px] sm:h-[34px] bg-[#874FD4]" 
                 style={{ 
                   WebkitMaskImage: `url("${NavbarLogo}")`, 
                   maskImage: `url("${NavbarLogo}")`, 
@@ -75,7 +75,7 @@ export default function Navbar() {
           </div>
           
           {/* nav-menu-2 (Desktop) */}
-          <nav className="hidden lg:flex items-center justify-center space-x-8 flex-1 px-4 h-full">
+          <nav className="hidden lg:flex items-center justify-center space-x-7 flex-1 px-4 h-full">
             <Link href="/about-us" className="text-[#2F282F] hover:text-[#874FD4] transition-colors text-[15px] font-medium leading-none">
               About
             </Link>
@@ -87,7 +87,7 @@ export default function Navbar() {
             >
               <button className="flex items-center text-[#2F282F] hover:text-[#874FD4] transition-colors text-[15px] font-medium leading-none group py-4">
                 Services
-                <svg className={`ml-1 w-4 h-4 transition-transform duration-200 text-gray-500 group-hover:text-[#874FD4] ${isDropdownOpen ? 'rotate-180' : ''}`} viewBox="0 0 24 24" fill="none">
+                <svg className={`ml-1 w-3.5 h-3.5 transition-transform duration-200 text-gray-500 group-hover:text-[#874FD4] ${isDropdownOpen ? 'rotate-180' : ''}`} viewBox="0 0 24 24" fill="none">
                   <path d="M11.9997 13.1714L16.9495 8.22168L18.3637 9.63589L11.9997 15.9999L5.63574 9.63589L7.04996 8.22168L11.9997 13.1714Z" fill="currentColor" />
                 </svg>
               </button>
@@ -99,7 +99,7 @@ export default function Navbar() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
                     transition={{ duration: 0.2 }}
-                    className="absolute top-[60px] left-1/2 -translate-x-1/2 pt-2 z-50"
+                    className="absolute top-[50px] left-1/2 -translate-x-1/2 pt-2 z-50"
                   >
                     <div className="w-[600px] bg-white rounded-3xl shadow-[0_20px_40px_rgba(0,0,0,0.1)] p-4 border border-gray-100 cursor-default">
                       <div className="grid grid-cols-2 gap-x-4 gap-y-2 mb-4">
@@ -140,17 +140,17 @@ export default function Navbar() {
           </nav>
           
           {/* nav-right */}
-          <div className="flex items-center space-x-3 shrink-0">
-            {/* Desktop Button */}
-            <div className="hidden lg:flex items-center">
-              <Link href="/contact" className="px-6 py-[11px] rounded-[30px] bg-[#874FD4] text-white hover:bg-[#723ac0] text-[15px] font-bold transition-colors">
+          <div className="flex items-center space-x-2 sm:space-x-3 shrink-0">
+            {/* Desktop & Tablet Button */}
+            <div className="hidden sm:flex items-center">
+              <Link href="/contact" className="px-6 py-[14px] md:px-8 md:py-[16px] rounded-full bg-[#874FD4] text-white hover:bg-[#723ac0] text-[14px] md:text-[15px] font-semibold transition-colors">
                 Get in touch
               </Link>
             </div>
             
-            {/* Mobile Hamburger/Close Button */}
+            {/* Mobile/Tablet Hamburger/Close Button */}
             <button 
-              className={`lg:hidden p-2 relative w-10 h-10 flex justify-center items-center rounded-full transition-colors ${isMenuOpen ? 'bg-[#f4eefe] text-[#874FD4]' : 'bg-[#874FD4] text-white hover:bg-[#723ac0]'}`}
+              className={`lg:hidden relative w-12 h-12 md:w-[52px] md:h-[52px] flex justify-center items-center rounded-full transition-all border ${isMenuOpen ? 'bg-[#F4EEFE] text-[#874FD4] border-transparent' : 'bg-white border-[#E9E4F5] text-[#2B2733] hover:bg-[#F4EEFE] hover:border-[#F4EEFE] hover:text-[#874FD4]'}`}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? (
@@ -159,7 +159,7 @@ export default function Navbar() {
                 </svg>
               ) : (
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M2.75 12H21.25M2.75 5.75H21.25M2.75 18.25H11.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M2.75 12H21.25M2.75 5.75H21.25M2.75 18.25H11.5" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               )}
             </button>
