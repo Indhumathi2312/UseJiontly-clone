@@ -8,13 +8,24 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        majorelle: "#5318EB", // primary purple accent
-        ultraviolet: "#280F62", // dark purple bg
-        lime: "#C4EE87", // lime green CTA
-        mauve: "#C6A5FF", // light purple accent
-        ink: "#0C021C", // near-black text
-        muted: "#666666",
-        lavender: "#EBE3FE",
+        primary: {
+          100: "#4266FF",
+        },
+        secondary: {
+          100: "#FB532D",
+          200: "#FFB420",
+          300: "#4266FF",
+        },
+        neutral: {
+          100: "#FFFFFF",
+          200: "#FAFAFA",
+          300: "#ECECEC",
+          400: "#CCCCCC",
+          500: "#7A7A7A",
+          600: "#4D4D4D",
+          700: "#202020",
+          800: "#121212",
+        }
       },
       maxWidth: {
         container: "1224px",

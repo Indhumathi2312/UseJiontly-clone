@@ -39,45 +39,45 @@ export default function Hero() {
   };
 
   return (
-    <section className="bg-[#2f282f] pt-32 md:pt-40 pb-16 md:pb-24 overflow-hidden flex flex-col items-center text-center">
+    <section className="bg-neutral-800 pt-32 md:pt-40 pb-16 md:pb-24 overflow-hidden flex flex-col items-center text-center">
       <div className=" mx-auto px-6 w-full flex flex-col items-center">
         
         {/* Eyebrow / Trust Element */}
-        <div className="inline-flex items-center space-x-4 mb-8 bg-[#1e171e] border border-white/10 rounded-full pl-2 pr-6 py-1.5 shadow-sm">
+        <div className="inline-flex items-center space-x-4 mb-8 bg-neutral-700 border border-neutral-100/10 rounded-full pl-2 pr-6 py-1.5 shadow-sm">
           <div className="flex -space-x-2">
-            <div className="w-9 h-9 md:w-11 md:h-11 rounded-full border-2 border-[#1e171e] bg-[#ffc4c4] overflow-hidden">
+            <div className="w-9 h-9 md:w-11 md:h-11 rounded-full border-2 border-neutral-700 bg-secondary-100 overflow-hidden">
                 <Image src={AvatarOne} alt="User 1" className="w-full h-full object-cover" placeholder="blur" />
             </div>
-            <div className="w-9 h-9 md:w-11 md:h-11 rounded-full border-2 border-[#1e171e] bg-[#c4ffda] overflow-hidden">
+            <div className="w-9 h-9 md:w-11 md:h-11 rounded-full border-2 border-neutral-700 bg-secondary-200 overflow-hidden">
                 <Image src={AvatarTwo} alt="User 2" className="w-full h-full object-cover" placeholder="blur" />
             </div>
-            <div className="w-9 h-9 md:w-11 md:h-11 rounded-full border-2 border-[#1e171e] bg-[#c4c4ff] overflow-hidden">
+            <div className="w-9 h-9 md:w-11 md:h-11 rounded-full border-2 border-neutral-700 bg-primary-100 overflow-hidden">
                 <Image src={AvatarThree} alt="User 3" className="w-full h-full object-cover" placeholder="blur" />
             </div>
           </div>
           <div className="flex flex-col items-start justify-center">
             <Image src={Stars} alt="5 Stars" className="h-[14px] md:h-[18px] w-auto mb-0.5" />
-            <span className="text-white/90 text-[10px] md:text-[14px] font-semibold leading-none tracking-wide">
+            <span className="text-neutral-100/90 text-[10px] md:text-[14px] font-semibold leading-none tracking-wide">
                 Trusted by busy marketing teams
             </span>
           </div>
         </div>
 
         {/* Hero Text */}
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.5rem] leading-[1.05] font-extrabold text-white tracking-[-0.02em] mb-6 max-w-[1400px]">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.5rem] leading-[1.05] font-extrabold text-neutral-100 tracking-[-0.02em] mb-6 max-w-[1400px]">
           Creative that wins specs.<br /> Built for the construction supply chain.
         </h1>
         
-        <p className="text-lg md:text-[22px] text-gray-200 max-w-2xl mb-12 font-medium leading-relaxed">
+        <p className="text-lg md:text-[22px] text-neutral-200 max-w-2xl mb-12 font-medium leading-relaxed">
           Help architects, contractors, and specifiers choose you. Without adding to your workload.
         </p>
 
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-5 w-full px-4 sm:px-0">
-          <Link href="/contact" className="px-8 py-4 rounded-full bg-[#8c52ff] text-white font-semibold text-[17px] hover:bg-[#7b46e3] transition-colors w-full sm:w-auto min-w-[200px] flex justify-center">
+          <Link href="/contact" className="px-8 py-4 rounded-full bg-primary-100 text-neutral-100 font-semibold text-[17px] hover:bg-primary-100/90 transition-colors w-full sm:w-auto min-w-[200px] flex justify-center">
             Get in touch
           </Link>
-          <Link href="/work" className="px-8 py-4 rounded-full bg-transparent border border-white/30 text-white font-semibold text-[17px] hover:bg-white/10 transition-colors w-full sm:w-auto min-w-[200px] flex justify-center">
+          <Link href="/work" className="px-8 py-4 rounded-full bg-transparent border border-neutral-100/30 text-neutral-100 font-semibold text-[17px] hover:bg-neutral-100/10 transition-colors w-full sm:w-auto min-w-[200px] flex justify-center">
             Our Work
           </Link>
         </div>

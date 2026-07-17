@@ -136,21 +136,21 @@ export default function Services() {
   const activeTabData = tabsData.find(t => t.id === activeTab) || tabsData[0];
 
   return (
-    <section id="services" className="w-full bg-white py-20 md:py-32 overflow-hidden font-sans">
-      <div className="max-w-[1000px] mx-auto px-4 md:px-6">
+    <section id="services" className="w-full bg-neutral-100 py-20 md:py-32 overflow-hidden font-sans">
+      <div className="max-w-[1280px] mx-auto px-4 md:px-6">
         
         {/* Header */}
         <div className="flex flex-col items-center text-center mb-12">
-          <div className="flex items-center space-x-2 text-[#9D71FD] font-bold uppercase tracking-wider text-[11px] md:text-xs mb-6">
+          <div className="flex items-center space-x-2 text-primary-100 font-bold uppercase tracking-wider text-[11px] md:text-xs mb-6">
             <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="4" cy="4" r="4" fill="currentColor" />
             </svg>
             <h2>Services</h2>
           </div>
-          <h2 className="text-[36px] md:text-5xl lg:text-[56px] leading-[1.1] font-bold text-[#2B2733] mb-5 tracking-tight max-w-[650px]">
+          <h2 className="text-[36px] md:text-5xl lg:text-[56px] leading-[1.1] font-bold text-neutral-800 mb-5 tracking-tight max-w-[650px]">
             Everything your team needs to market better
           </h2>
-          <p className="text-[#645E76] text-[16px] md:text-lg leading-relaxed max-w-[620px]">
+          <p className="text-neutral-500 text-[16px] md:text-lg leading-relaxed max-w-[620px]">
             From pitch decks to specification sheets, campaign landing pages
             to full brand refreshes: we're your in-house creative team,
             without the overheads.
@@ -165,8 +165,8 @@ export default function Services() {
               onClick={() => setActiveTab(tab.id)}
               className={`shrink-0 snap-center px-5 py-[10px] rounded-full text-[13px] md:text-[14px] font-medium transition-all duration-300 border ${
                 activeTab === tab.id
-                  ? "bg-[#874FD4] text-white border-[#874FD4] shadow-sm"
-                  : "bg-white text-[#645E76] border-gray-100 hover:border-gray-300 shadow-[0_2px_8px_rgba(0,0,0,0.02)]"
+                  ? "bg-primary-100 text-neutral-100 border-primary-100 shadow-sm"
+                  : "bg-neutral-100 text-neutral-500 border-neutral-300 hover:border-neutral-400 shadow-[0_2px_8px_rgba(0,0,0,0.02)]"
               }`}
             >
               {tab.label}
@@ -177,7 +177,7 @@ export default function Services() {
         {/* Tab Content Display */}
         <div className="w-full flex flex-col relative animate-fade-in">
           {/* Image */}
-          <div className="w-full aspect-[4/3] sm:aspect-video md:aspect-[21/10] rounded-[24px] md:rounded-[32px] overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.06)] border border-gray-100 mb-6 bg-[#2B2733]">
+          <div className="w-full aspect-[4/3] sm:aspect-video md:aspect-[21/10] rounded-[24px] md:rounded-[32px] overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.06)] border border-neutral-300 mb-6 bg-neutral-800">
             <img 
               src={activeTabData.imgSrc} 
               alt={activeTabData.label} 
@@ -193,12 +193,12 @@ export default function Services() {
                 alt="client logo" 
                 className="h-5 md:h-7 w-auto object-contain mr-1 filter brightness-0" 
               />
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="text-[#2B2733] group-hover:translate-x-1 transition-transform">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="text-neutral-800 group-hover:translate-x-1 transition-transform">
                 <polyline points="9 18 15 12 9 6"></polyline>
               </svg>
             </Link>
             
-            <div className="px-4 py-1.5 rounded-full border border-[#BBA4FF] text-[#874FD4] text-[11px] md:text-xs font-medium tracking-wide bg-[#FDFBFF]">
+            <div className="px-4 py-1.5 rounded-full border border-primary-100/30 text-primary-100 text-[11px] md:text-xs font-medium tracking-wide bg-primary-100/10">
               {activeTabData.industry}
             </div>
           </div>
@@ -207,7 +207,7 @@ export default function Services() {
           <div className="flex justify-center w-full mt-2 md:mt-4">
             <Link 
               href={activeTabData.btnLink}
-              className="inline-flex items-center justify-center px-8 md:px-10 py-3.5 md:py-4 rounded-full bg-[#874FD4] text-white text-[14px] md:text-[15px] font-semibold hover:bg-purple-700 transition-all shadow-lg hover:scale-105"
+              className="inline-flex items-center justify-center px-8 md:px-10 py-3.5 md:py-4 rounded-full bg-primary-100 text-neutral-100 text-[14px] md:text-[15px] font-semibold hover:bg-primary-100/90 transition-all shadow-lg hover:scale-105"
             >
               {activeTabData.btnText}
             </Link>

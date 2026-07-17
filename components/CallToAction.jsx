@@ -9,10 +9,10 @@ const MagazineMockup = "/images/69823456ae794b49c6cbef95_Frame 2147226765.avif";
 
 export default function CallToAction() {
   return (
-    <section className="bg-[#2B2733] py-16 md:py-32 overflow-hidden font-sans">
-      <div className="max-w-[1100px] mx-auto px-4 md:px-6">
+    <section className="bg-neutral-800 py-16 md:py-32 overflow-hidden font-sans">
+      <div className="max-w-[1500px] mx-auto px-4 md:px-6">
         
-        <div className="bg-[#874FD4] rounded-[32px] md:rounded-[40px] p-8 py-14 md:p-14 lg:p-20 relative overflow-hidden flex flex-col md:flex-row items-center md:min-h-[550px]">
+        <div className="bg-primary-100 rounded-[32px] md:rounded-[40px] p-8 py-14 md:p-14 lg:p-20 relative overflow-hidden flex flex-col md:flex-row items-center md:min-h-[550px]">
           
           {/* Background Circles (Desktop) */}
           <svg className="absolute top-0 right-0 w-[120%] h-[120%] pointer-events-none hidden md:block z-0 transform translate-x-[20%] -translate-y-[10%]" viewBox="0 0 1000 800" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -24,8 +24,8 @@ export default function CallToAction() {
 
           {/* Background Images Overlay (Mobile/Tablet) */}
           <div className="absolute inset-0 z-0 md:hidden overflow-hidden pointer-events-none flex items-center justify-center">
-            <div className="absolute inset-0 bg-[#874FD4]/70 z-10 mix-blend-color"></div>
-            <div className="absolute inset-0 bg-[#874FD4]/30 z-10"></div>
+            <div className="absolute inset-0 bg-primary-100/70 z-10 mix-blend-color"></div>
+            <div className="absolute inset-0 bg-primary-100/30 z-10"></div>
             <div className="grid grid-cols-2 gap-4 w-[160%] h-[160%] transform rotate-[-15deg] opacity-40 scale-125">
               <img src={MagazineMockup} className="w-full h-full object-cover rounded-[24px]" alt="" />
               <img src={Section10DesignFlyer} className="w-full h-full object-cover rounded-[24px]" alt="" />
@@ -40,50 +40,50 @@ export default function CallToAction() {
             {/* Mobile/Tablet Trust Badge */}
             <div className="flex flex-col items-center mb-8 md:hidden">
               <div className="flex -space-x-2 mb-3">
-                <img src={Section10AvatarMemojiOne} className="w-10 h-10 rounded-full border-2 border-[#874FD4] bg-[#FCE588] shadow-sm object-cover" alt="User" />
-                <img src={Section10AvatarMemojiTwo} className="w-10 h-10 rounded-full border-2 border-[#874FD4] bg-[#A3E5B8] shadow-sm object-cover" alt="User" />
-                <img src={Section10AvatarMemojiThree} className="w-10 h-10 rounded-full border-2 border-[#874FD4] bg-[#C7BAF8] shadow-sm object-cover" alt="User" />
+                <img src={Section10AvatarMemojiOne} className="w-10 h-10 rounded-full border-2 border-primary-100 bg-secondary-200 shadow-sm object-cover" alt="User" />
+                <img src={Section10AvatarMemojiTwo} className="w-10 h-10 rounded-full border-2 border-primary-100 bg-secondary-100/20 shadow-sm object-cover" alt="User" />
+                <img src={Section10AvatarMemojiThree} className="w-10 h-10 rounded-full border-2 border-primary-100 bg-primary-100/20 shadow-sm object-cover" alt="User" />
               </div>
-              <div className="flex text-[#FBBF24] mb-1.5 space-x-1">
+              <div className="flex text-secondary-200 mb-1.5 space-x-1">
                 {[1,2,3,4,5].map(i => (
                   <svg key={i} width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                 ))}
               </div>
-              <span className="text-white text-[13px] font-bold tracking-wide">Trusted by 23+ clients</span>
+              <span className="text-neutral-100 text-[13px] font-bold tracking-wide">Trusted by 23+ clients</span>
             </div>
 
-            <h2 className="text-[38px] md:text-5xl lg:text-[60px] font-bold mb-6 text-white leading-[1.05] tracking-tight max-w-[600px]">
+            <h2 className="text-[38px] md:text-5xl lg:text-[60px] font-bold mb-6 text-neutral-100 leading-[1.05] tracking-tight max-w-[600px]">
               Got a project in mind?<br className="hidden lg:block"/> Let's talk.
             </h2>
-            <p className="text-white/95 text-[15px] md:text-[17px] leading-relaxed mb-6 font-medium max-w-[500px]">
+            <p className="text-neutral-100/95 text-[15px] md:text-[17px] leading-relaxed mb-6 font-medium max-w-[500px]">
               Whether it's a one-off landing page, a run of campaigns or a
               full website designed and delivered in Webflow, we'll help
               you shape the brief, timeline and budget.
             </p>
-            <p className="text-white/95 text-[15px] md:text-[17px] leading-relaxed mb-10 font-medium max-w-[500px]">
+            <p className="text-neutral-100/95 text-[15px] md:text-[17px] leading-relaxed mb-10 font-medium max-w-[500px]">
               Let's chat about what you're trying to get done and how we
               can support you.
             </p>
 
             <div className="flex flex-col md:flex-row items-center md:items-center gap-6">
-              <Link href="/contact" className="px-8 py-4 rounded-full bg-white text-[#2B2733] font-bold text-[16px] shadow-xl hover:scale-105 transition-transform w-fit whitespace-nowrap">
+              <Link href="/contact" className="px-8 py-4 rounded-full bg-neutral-100 text-neutral-800 font-bold text-[16px] shadow-xl hover:scale-105 transition-transform w-fit whitespace-nowrap">
                 Get in touch
               </Link>
               
               {/* Desktop Trust Badge */}
               <div className="hidden md:flex items-center space-x-3 ml-2">
                 <div className="flex -space-x-2">
-                  <img src={Section10AvatarMemojiOne} className="w-10 h-10 rounded-full border-2 border-[#874FD4] bg-[#FCE588] shadow-sm object-cover" alt="User" />
-                  <img src={Section10AvatarMemojiTwo} className="w-10 h-10 rounded-full border-2 border-[#874FD4] bg-[#A3E5B8] shadow-sm object-cover" alt="User" />
-                  <img src={Section10AvatarMemojiThree} className="w-10 h-10 rounded-full border-2 border-[#874FD4] bg-[#C7BAF8] shadow-sm object-cover" alt="User" />
+                  <img src={Section10AvatarMemojiOne} className="w-10 h-10 rounded-full border-2 border-primary-100 bg-secondary-200 shadow-sm object-cover" alt="User" />
+                  <img src={Section10AvatarMemojiTwo} className="w-10 h-10 rounded-full border-2 border-primary-100 bg-secondary-100/20 shadow-sm object-cover" alt="User" />
+                  <img src={Section10AvatarMemojiThree} className="w-10 h-10 rounded-full border-2 border-primary-100 bg-primary-100/20 shadow-sm object-cover" alt="User" />
                 </div>
                 <div className="flex flex-col">
-                  <div className="flex text-[#FBBF24] mb-1 space-x-0.5">
+                  <div className="flex text-secondary-200 mb-1 space-x-0.5">
                     {[1,2,3,4,5].map(i => (
                       <svg key={i} width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                     ))}
                   </div>
-                  <span className="text-white text-[12px] font-bold tracking-wide">Trusted by busy marketing teams</span>
+                  <span className="text-neutral-100 text-[12px] font-bold tracking-wide">Trusted by busy marketing teams</span>
                 </div>
               </div>
             </div>

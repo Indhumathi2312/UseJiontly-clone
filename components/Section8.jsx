@@ -62,34 +62,34 @@ const testimonials = [
 
 export default function Section8() {
   return (
-    <section id="testimonials" className="bg-[#181124] py-24 overflow-hidden border-t border-white/10">
-      <div className="max-w-container mx-auto px-6 mb-16">
+    <section id="testimonials" className="bg-neutral-800 py-24 overflow-hidden border-t border-neutral-100/10">
+      <div className="max-w-[1280px] mx-auto px-6 mb-16">
         
         {/* Header */}
         <div className="flex flex-col items-center text-center">
           
-          <div className="flex items-center space-x-3 bg-white/5 border border-white/10 rounded-full px-4 py-2 mb-8 backdrop-blur-md">
+          <div className="flex items-center space-x-3 bg-neutral-100/5 border border-neutral-100/10 rounded-full px-4 py-2 mb-8 backdrop-blur-md">
             <div className="flex -space-x-2">
-              <img src={Section8AvatarMemojiOne.src || Section8AvatarMemojiOne} alt="User 1" className="w-8 h-8 rounded-full border-2 border-[#181124] bg-pink-100" />
-              <img src={Section8AvatarMemojiTwo.src || Section8AvatarMemojiTwo} alt="User 2" className="w-8 h-8 rounded-full border-2 border-[#181124] bg-green-100" />
-              <img src={Section8AvatarMemojiThree.src || Section8AvatarMemojiThree} alt="User 3" className="w-8 h-8 rounded-full border-2 border-[#181124] bg-purple-100" />
+              <img src={Section8AvatarMemojiOne.src || Section8AvatarMemojiOne} alt="User 1" className="w-8 h-8 rounded-full border-2 border-neutral-800 bg-secondary-200" />
+              <img src={Section8AvatarMemojiTwo.src || Section8AvatarMemojiTwo} alt="User 2" className="w-8 h-8 rounded-full border-2 border-neutral-800 bg-secondary-100" />
+              <img src={Section8AvatarMemojiThree.src || Section8AvatarMemojiThree} alt="User 3" className="w-8 h-8 rounded-full border-2 border-neutral-800 bg-primary-100/20" />
             </div>
-            <div className="flex flex-col items-start ml-2 border-l border-white/20 pl-3">
-              <div className="flex text-majorelle text-xs mb-0.5">
+            <div className="flex flex-col items-start ml-2 border-l border-neutral-100/20 pl-3">
+              <div className="flex text-secondary-200 text-xs mb-0.5">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
               </div>
-              <span className="text-white text-[10px] uppercase font-semibold tracking-wider">Trusted by busy marketing teams</span>
+              <span className="text-neutral-100 text-[10px] uppercase font-semibold tracking-wider">Trusted by busy marketing teams</span>
             </div>
           </div>
 
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-neutral-100 mb-4">
             This is why we do what we do
           </h2>
-          <p className="text-lg text-gray-300">
+          <p className="text-lg text-neutral-300">
             We love our clients, and the feeling is mutual.
           </p>
         </div>
@@ -101,21 +101,21 @@ export default function Section8() {
         {/* Animated Track */}
         <div className="flex animate-marquee group-hover:pause space-x-6 px-3">
           {[...testimonials, ...testimonials, ...testimonials].map((item, idx) => (
-            <div key={idx} className="flex-shrink-0 w-[350px] md:w-[450px] bg-white/5 border border-white/10 rounded-[32px] p-8 flex flex-col justify-between h-[400px] hover:bg-white/10 transition-colors">
+            <div key={idx} className="flex-shrink-0 w-[350px] md:w-[450px] bg-neutral-100/5 border border-neutral-100/10 rounded-[32px] p-8 flex flex-col justify-between h-[400px] hover:bg-neutral-100/10 transition-colors">
               
               <div className="mb-6 h-12">
                 <img src={item.companyLogo} alt="Company Logo" className="h-full w-auto object-contain brightness-0 invert opacity-70" />
               </div>
               
               <div className="flex-grow">
-                <p className="text-gray-300 text-lg leading-relaxed font-medium">"{item.quote}"</p>
+                <p className="text-neutral-300 text-lg leading-relaxed font-medium">"{item.quote}"</p>
               </div>
               
-              <div className="flex items-center space-x-4 mt-6 pt-6 border-t border-white/10">
-                <img src={item.avatar} alt={item.name} className="w-12 h-12 rounded-full border border-white/20 bg-gray-800" />
+              <div className="flex items-center space-x-4 mt-6 pt-6 border-t border-neutral-100/10">
+                <img src={item.avatar} alt={item.name} className="w-12 h-12 rounded-full border border-neutral-100/20 bg-neutral-800" />
                 <div>
-                  <h4 className="text-white font-semibold">{item.name}</h4>
-                  <p className="text-gray-400 text-sm">{item.title}</p>
+                  <h4 className="text-neutral-100 font-semibold">{item.name}</h4>
+                  <p className="text-neutral-400 text-sm">{item.title}</p>
                 </div>
               </div>
 
